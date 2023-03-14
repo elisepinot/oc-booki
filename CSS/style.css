@@ -1,0 +1,568 @@
+*{
+    font-family: 'Raleway', sans-serif;
+    color:black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+/*Tips dans le webinaire "Intégrez une maquette" pour que le site ne s'étire pas à l'infini :
+créer une balise div qui contient tout le code dans le body, qui se comporte en flexbox pour 
+que le contenu soit toujours centré*/
+
+body{
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+}
+
+#main-container{
+    max-width: 1400px;
+    width: 100%;
+    padding: 0px 48px;
+}
+
+section{
+    margin-bottom: 48px;
+}
+
+
+h1{
+    font-size: 22px;
+    font-weight: 700;
+}
+
+h2{
+    font-size: 22px;
+    font-weight: 700;
+    padding: 16px 0;
+}
+
+h3{
+    font-size: 16px;
+    font-weight: 700;
+}
+
+h4{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+p{
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0.5rem 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+
+/* Header */
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.logo-booki
+{
+    height: 29px;
+}
+
+#menu{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.option-menu{
+    padding: 56px 32px 32px 32px;
+    border-top: 4px solid #FFFFFF;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.option-menu:hover{
+    border-top: 4px solid #0065FC;
+}
+
+.option-menu:hover a{
+    color: #0065FC;
+}
+
+
+/* Section Recherche */
+
+/* Formulaire de recherche */
+
+#form-research{
+    display: flex;
+    flex-wrap: nowrap;
+    height: 49px;
+    margin: 32px 0;
+}
+
+#form-logo{
+    background-color: #F2F2F2;
+    width: 50px;
+    border: 1px solid #F2F2F2;
+    border-radius: 15px 0px 0px 15px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+#form-city{
+    height: 100%;
+    border-top: 1px solid #F2F2F2;
+    border-bottom: 1px solid #F2F2F2;
+    width: 240px;
+}
+
+#input-city{
+    border: none;
+    height: 100%;
+    padding-left: 10px;
+    width: 240px; 
+    font-size: 18px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.btn-rechercher1, .btn-rechercher2{
+    background-color: #0065FC;
+    color: #FFFFFF;
+    border: 1px solid #0065FC;
+    border-radius: 0px 15px 15px 0px;
+    height: 100%;
+    font-size: 18px;
+    font-weight: 700;
+    
+}
+
+.btn-rechercher1{
+    padding: 0 8px;
+}
+
+.btn-rechercher2{
+    display: none;
+    width: 48px;
+}    
+
+.fa-magnifying-glass{
+    display: none;
+    color: #FFF;
+}
+
+/* Filtres */
+
+#filter{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-bottom: 40px;
+    text-align: center;
+    align-items: center;
+}
+
+#title-filter{
+    font-size: 18px;
+    font-weight: 700;
+    margin-right: 16px;
+}
+
+.filter-box{
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+}
+
+
+.ico-filter{
+    color: #0065FC;
+    padding-right: 8px;
+}
+
+.filter-btn{
+    display: flex;
+    align-items: center;
+    height: 48px;
+    padding: 0 16px;
+    font-size: 17px;
+    font-weight: 700;
+    border: 2px solid #D9D9D9;
+    border-radius: 25px;
+}
+
+.filter-btn:hover{
+    background-color: #DEEBFF;
+}
+
+#number-result{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.fa-info{
+    margin-right: 8px;
+    border: 1px solid #D9D9D9;
+    border-radius: 50%;
+    background-color: #FFF;
+    height: 24px;
+    width: 24px;
+    color: #0065FC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+}
+
+
+/* Accomodation Section + Most Popular Section Container */
+
+#section-research-pop{
+    display: flex;
+    justify-content: space-between;
+
+}
+/* Accomodation Section*/
+
+#section-accomodation{
+    background: #F2F2F2;
+    border-radius: 20px;
+    width: 64%;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 24px;
+}
+
+#acc-results{
+    display: flex;
+    flex-wrap: wrap; 
+    /* justify-content: space-between; */
+    justify-content: space-evenly;
+    gap: 3%;
+    margin: auto;
+    width: 94%;
+}
+
+/* quand tu fais margin: auto; ou tu peux faire margin: 24px auto; ca modifie centre horizontalement ton element
+comme width = 94%, il reste 6% avec margin auto il met 3% de chaque côtés et ton gap = 3% */
+
+.acc-card{
+    background: #FFFFFF;
+    border-radius: 20px;
+    /* width: 240px; */
+    width: 31%;
+    border-radius: 20px;
+    /* margin-bottom: 24px; */
+    margin-bottom: 3%;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+/* ça pas sûre qu'il faille mettre */
+.acc-card:hover{
+    filter: drop-shadow(0px 6px 25px rgba(0, 0, 0, 0.1));
+}
+
+.img-accommodation{
+    width: 100%;
+    height: 124px;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+    border: 5px solid #FFFFFF;
+}
+
+.fa-star{
+    color: #F2F2F2;
+    font-size: 16px;
+}
+
+.checked{
+    color: #0065FC;
+}
+
+.card-text{
+    padding: 10px 10px;
+}
+
+
+
+/* Section Most Popular */
+#section-most-popular{
+    background: #F2F2F2;
+    border-radius: 20px;
+    width: 32%;
+    padding: 16px 24px;
+}
+
+.header-most-pop{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.acc-most-popular{
+    display: flex;
+    flex-direction: row;
+    background: #FFFFFF;
+    border-radius: 20px;
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 24px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    height: 144px;  
+}
+
+.card-popular{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: start;
+    padding: 16px 8px;
+}
+
+.img-popular{
+    width: 35%;
+    object-fit: cover;
+    border-radius: 20px 0px 0px 20px;
+    border: 5px solid #FFFFFF;
+}
+
+
+
+/* Section Activity */
+
+#section-activity{
+}
+
+#activity{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.card-activity{
+    width: 22%;
+    border-radius: 20px;
+    border: 1px solid #D9D9D9;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.img-activity{
+    width: 100%;
+    height: 389px;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.title-activity{
+    padding: 20px;
+    /* border-radius: 0px 0px 20px 20px;
+    border-left: 1px solid #D9D9D9;
+    border-bottom: 1px solid #D9D9D9;
+    border-right: 1px solid #D9D9D9;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1)); */
+}
+
+/* Footer */
+
+footer{
+    display: flex;
+    background: #F2F2F2;
+}
+
+.footer-bloc{
+    margin: 50px 0;
+    line-height: 2rem;
+    width: 33%;
+    padding-left: 70px;
+}
+
+/* Responsive design */
+
+@media screen and (max-width:1310px){
+    #acc-results{
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width: 1024px){
+
+    #section-research-pop{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .filter-box{
+        width: 100%;
+    }
+
+    #section-accomodation{
+        width: 100%;
+    }
+
+    #acc-results{
+        justify-content: space-between;
+    }
+
+
+    #section-most-popular{
+        width: 100%;
+    }
+
+    #acc-most-popular{
+        display: flex;
+        gap: 20px;
+    }
+
+    .img-activity{
+        width: 100%;
+        height: 267px;
+    }
+
+}
+
+    
+@media screen and (max-width: 768px){
+
+    #main-container{
+        padding: 0;
+    }
+
+    header{
+        flex-direction: column;
+    }
+
+    header img{
+        margin-top: 32px;
+    }
+
+    nav{
+        width: 100%;
+
+    }
+
+    .option-menu{
+        width: 50%;
+
+    }
+
+    #menu{
+        text-align: center;
+
+    }
+
+    .option-menu{
+        border-top:none;
+        border-bottom: 3px solid #F2F2F2;
+    }
+    
+    .option-menu:hover{
+        border-top:none;
+        border-bottom: 3px solid #0065FC;
+    }
+    
+    .option-menu:hover a{
+        color: #0065FC;
+    }
+
+   #research{
+    padding: 30px 20px;
+   }
+
+   h1{
+    font-size: 22px;
+   }
+
+   .btn-rechercher1{
+    display: none;
+   }
+
+   .btn-rechercher2, .fa-magnifying-glass{
+    display: inline-block;
+   }
+
+   #form-city, #input-city{
+    width: 100%;
+    }
+
+    #title-filter{
+        margin-bottom: 24px;
+    }
+
+    #filter{
+        flex-wrap: wrap;
+    }
+
+    .filter-box{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 16px;
+    }
+
+    .filter-btn{
+        font-size: 11px;
+        
+    }
+
+    #section-accomodation{
+        order: 2;
+        border-radius: 0px;
+        background-color: #FFF;
+    }
+
+    .acc-card{
+        width: 100%;
+    }
+
+    #acc-most-popular{
+        flex-direction: column;
+    }
+
+    #section-most-popular{
+        border-radius: 0px;
+        margin-bottom: 0;
+    }
+    
+    #section-activity{
+        flex-direction: column;
+        padding: 16px 24px;
+
+    }
+    .card-activity{
+        width: 100%;
+        margin-bottom: 16px;
+
+    }
+
+    .img-activity{
+        height: 136px;
+    }
+
+    footer{
+        flex-direction: column;
+        padding-left: 32px;
+    }
+
+    .footer-bloc{
+        width: 100%;
+        padding: 0;
+        margin: 32px 0;
+        line-height: 2rem;
+    }
+
+}
