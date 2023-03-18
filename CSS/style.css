@@ -59,8 +59,6 @@ a{
 }
 
 
-
-
 /* Header */
 
 header{
@@ -247,28 +245,21 @@ header{
 #acc-results{
     display: flex;
     flex-wrap: wrap; 
-    /* justify-content: space-between; */
-    justify-content: space-evenly;
-    gap: 3%;
-    margin: auto;
-    width: 94%;
+    justify-content: space-between;
+    /* margin: auto; */
+    /* width: 100%; */
 }
-
-/* quand tu fais margin: auto; ou tu peux faire margin: 24px auto; ca modifie centre horizontalement ton element
-comme width = 94%, il reste 6% avec margin auto il met 3% de chaque côtés et ton gap = 3% */
 
 .acc-card{
     background: #FFFFFF;
     border-radius: 20px;
-    /* width: 240px; */
     width: 31%;
     border-radius: 20px;
-    /* margin-bottom: 24px; */
     margin-bottom: 3%;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
-/* ça pas sûre qu'il faille mettre */
+/* pas dans la maquette - pour tester*/
 .acc-card:hover{
     filter: drop-shadow(0px 6px 25px rgba(0, 0, 0, 0.1));
 }
@@ -293,7 +284,6 @@ comme width = 94%, il reste 6% avec margin auto il met 3% de chaque côtés et t
 .card-text{
     padding: 10px 10px;
 }
-
 
 
 /* Section Most Popular */
@@ -369,11 +359,6 @@ comme width = 94%, il reste 6% avec margin auto il met 3% de chaque côtés et t
 
 .title-activity{
     padding: 20px;
-    /* border-radius: 0px 0px 20px 20px;
-    border-left: 1px solid #D9D9D9;
-    border-bottom: 1px solid #D9D9D9;
-    border-right: 1px solid #D9D9D9;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1)); */
 }
 
 /* Footer */
@@ -391,12 +376,6 @@ footer{
 }
 
 /* Responsive design */
-
-@media screen and (max-width:1310px){
-    #acc-results{
-        justify-content: space-evenly;
-    }
-}
 
 @media screen and (max-width: 1024px){
 
